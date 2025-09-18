@@ -581,3 +581,284 @@ th{
     
     
 }
+
+.main2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:90px;
+    margin-top: 50px;
+    padding: 20px 10px 0px 40px;
+    padding: 55px ;
+
+}
+
+.firsttext{
+    display: flex;
+    flex-direction: row;
+    color:white;
+    gap:50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ourproduct p{
+    font-size: 15px;
+    font-style: light;
+    color:#B3B3B3;
+}
+
+.ourproduct{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    justify-content: center;
+    
+}
+
+.span{
+    color:#CAFF33;
+
+}
+
+.ourproduct h2{
+    font-size: 38px;
+    font-weight: 500;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    background-color: #1C1C1C;
+    border: 1px solid #262626;
+    width: 299px;
+    height: 65px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+.buttons {
+    font-size: 15px;
+}
+
+.greenbutton{
+    background-color: #CAFF33;
+    color: #1C1C1C;
+    border-radius: 30px;
+    padding: 15px;
+    font-weight: 400;
+   
+}
+
+.accs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:50px
+   
+}
+
+.accs div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap:10px;
+    box-shadow: 1px 5px 0px #262626;
+}
+.accs div p{
+    color: #B3B3B3;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.accs div h3{
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.accs div img{
+    width: 72px;
+    height: 72px;
+
+}
+
+
+.main3{
+    display: flex;
+    flex-direction: column;
+    color:#fff;
+    padding: 50px 60px;
+    gap:30px
+}
+
+.cases{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+
+}
+
+.cases h1{
+    color:#CAFF33;
+    font-size: 38px;
+    font-weight: 500;
+    font-style: Medium;
+}
+
+.cases p{
+    color:#B3B3B3;
+    font-size: 15px;
+    font-style: Light;
+    font-weight: 300;
+
+}
+
+
+
+
+.personalmain{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:50px
+}
+.biggreydiv{
+    background-color: #1C1C1C;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 610px;
+    height: 414px;
+    border-radius: 20px;
+}
+
+.personalinfo{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.positionrow1{
+    display: flex;
+    flex-direction: row;
+    gap:20px
+}
+
+.positionrow2{
+    display: flex;
+    flex-direction: row;
+    gap:20px
+}
+
+.positionrow1 div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #1A1A1A;
+    width: 260px;
+    height: 174px;
+    border-radius: 20px;
+    border: #262626 1px solid;
+    z-index: 3;
+    gap:15px
+    
+}
+
+.positionrow2 div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #1A1A1A;
+    width: 260px;
+    height: 174px;
+    border-radius: 20px;
+    border: #262626 1px solid;
+    z-index: 3;
+    gap:15px
+    
+}
+
+.greendots{
+    position: absolute;
+    left: 330px;
+    top:1555px;
+    z-index: 1;
+}
+
+
+.mainindividuals{
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    gap:50px;
+
+}
+
+.indi p{
+    color:Grey;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: Light;
+    line-height: 150%;
+}
+
+.indi h3{
+    color:#FFFFFF;
+    font-size: 26px;
+    font-weight: 500;
+    font-style: Medium;
+
+}
+.indi{
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
+
+.percents{
+    display: flex;
+    flex-direction: row;
+    gap:40px
+}
+
+.percents div{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding:10px;
+    border-right: 1px #262626 dashed ;
+    padding: 10px;
+    
+    
+}
+
+.percents div h1{
+    font-size: 40px;
+    font-weight: 500;
+    color:#CAFF33;
+    
+}
+
+
+.learnmore{
+    background-color: #1C1C1C;
+    border: #262626;
+    color:  #FFFFFF;
+    padding: 15px;
+    border-radius: 30px;
+    border:#262626 solid 1px; 
+}
