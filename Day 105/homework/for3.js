@@ -4,4 +4,9 @@
 
 
 
-function func()
+function func(str){
+    if(str.length <= 10){
+
+        return str.slice(0, str.length) // 0 1 2 length = 3   3 - 1 = 2 last index = 2 
+    }
+}
