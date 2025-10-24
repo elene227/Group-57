@@ -11,7 +11,7 @@ function func(arr){
     }
     for(let n = 0; n < arrNew.length; i++){
         if(arrNew[n][0] == "ა"){
-            arrNew.splice(arrNew[n])
+            arrNew.splice(arrNew[n], 1)
         }
     }
 }
