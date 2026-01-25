@@ -36,19 +36,9 @@
 
 //
 let button = document.getElementById("button")
-
+let input1 = document.getElementById("")
 let li = []
-button.addEventListener("click", function Person(name, email, password){
-    event.preventDefault()
-    name = document.getElementById("name")
-    email = document.getElementById("email")
-    password = document.getElementById("password")
-    
-    this.name = name
-    this.email = email
-    this.password = password
-    li.push(name)
-    li.push(email)
-    li.push(password)
-    console.log(li)
-})
+
+
+
+

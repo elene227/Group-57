@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body{
+    height: 100vh;
+     font-family: "Cascadia Mono", sans-serif;
+     background-color: hsl(20, 50%, 98%);
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    
+}
+
+
+.row{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    
+
+}
+
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap:5.5px;
+    
+    
+    
+}
+
+
+.dessertimg img{
+    width: 300px;
+    border-radius: 10px;
+
+}
+
+.addcart img{
+    width: 20px;
+    
+}
+
+.addcart{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid hsl(14, 65%, 9%);
+    border-radius: 30px;
+    width: 170px;
+    height: 45px;
+    padding: 10px;
+    position: absolute;
+    top:265px;
+    z-index: 3;
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+
+
+.dessertimg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 25px;
+    
+}
+
+
+.red{
+    color:hsl(14, 86%, 42%);
+}
+
+.d{
+    font-weight: 900;
+    color:hsl(14, 65%, 9%);
+}
+
+
+.grey{
+    color: hsl(12, 20%, 44%);
+    font-size: 15px;
+    font-weight: 300;
+    
+}
+
+
+
+
+.yourCart{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    padding: 20px;
+    width: 350px;
+    border-radius: 15px;
+    gap:40px
+}
+
+
+.mainrow{
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    gap:50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+}
+
+.yourCart h2{
+    width: 100%;
+    color: hsl(14, 86%, 42%)
+}
+
+.yourCart p{
+    color: hsl(12, 20%, 44%)
+}
+
+
+
+
+
+.adding{
+    background-color: hsl(14, 86%, 42%);
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    width: 170px;
+    height: 45px;
+    padding: 10px;
+    position: absolute;
+    top:265px;
+    z-index: 3;
+    border-radius: 25px;
+    color:white
+}
+
+.minus{
+    background-color: hsl(14, 86%, 42%);
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.plus{
+     background-color: hsl(14, 86%, 42%);
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 4px 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.minus img{
+    width: 15px;
+    
+}
+
+.plus img{
+    width: 15px;
+}
+

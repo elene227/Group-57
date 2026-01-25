@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="for.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+<div style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap:400px">
+  <div class="imgcards">
+  <div class="cards">
+    <div class="card1">
+      <div class="circles">
+        <div class="whitecircle"></div>
+        <div class="linecircle"></div>
+      </div>
+      <div class="column">
+      <h3 id="number">0000 0000 0000 0000</h3>
+      <div class="username">
+         <p id="name">Jane Appleseed</p>
+         <p id="born">00/00</p>
+      </div>
+      </div>
+    </div>
+
+
+
+    <div class="card2">
+      <p id="cvc">000</p>
+    </div>
+    </div>
+  <img id="img1"  src="./images/bg-main-desktop.png" alt="">
+  </div>
+
+  
+
+ 
+    <div style="display: flex; flex-direction: column;  ">
+        <form id="form" style="display: flex; flex-direction: column; gap:30px">
+          <div style="display: flex; flex-direction: column; gap:4px">
+            <label for="name">CARDHOLDER NAME</label>
+            <input name="username" style="width: 350px; height: 30px; font-size: 18px;" type="text" placeholder="e.g. Jane Appleseed">
+            <br>
+            <label for="numeber">CARD NUMBER</label>
+            <input id="cardnumber" name="cardnumber" style="width: 350px; height: 30px; font-size: 18px;" type="text" placeholder="e.g. 1234 5678 9123 0000">
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap:10px">
+            <div style="display: flex; flex-direction: row; gap:40px">
+              <label for="date">EXP. DATE(MM/YY)</label>
+              <label for="">CVC</label>
+            </div>
+            <div style="display: flex; flex-direction: row; gap:20px">
+            <input maxlength="2" name="month" style="width: 50px;" type="text" placeholder="">
+            <input maxlength="2" name="year" style="width: 50px; height: 25px; margin-right: 30px; " type="text" placeholder="">
+             <input name="cvc" style="width: 150px; height: 25px;" type="text" placeholder="">
+            </div>
+            <button id="confirm" type="submit" style="background-color: rgb(16, 22, 35); padding: 10px; border-radius: 5px; width: 350px; color: aliceblue; font-size: 17px;">Confirm</button>
+          </div>
+        </form>
+    </div>
+
+
+
+</div>
+
+
+<!-- 
+  0000 0000 0000 0000
+  Jane Appleseed
+  00/00
+
+  000
+
+  Cardholder Name
+  e.g. Jane Appleseed
+
+  Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm
+
+ 
+  Thank you!
+  We've added your card details
+  Continue
+   -->
+
+
+   <script src="for.js">
+
+   </script>
+  
+</body>
+</html>

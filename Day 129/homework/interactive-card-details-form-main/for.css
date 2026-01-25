@@ -1,0 +1,129 @@
+
+
+
+
+body{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+
+#img1{
+    z-index: 1;
+    width: 500px;
+    
+    
+  
+    
+    
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 200px; */
+    position: absolute;
+    gap: 50px;
+    margin-left: 300px;
+    
+   
+    
+    
+    
+}
+
+.card1{
+    background-image: url('./images/bg-card-front.png');
+    background-repeat: no-repeat;
+    width: 450px;
+    height: 250px;
+    z-index: 20;
+    /* position: absolute; */
+    padding-top: 20px;
+    padding-left: 20px;
+   
+    
+    
+}
+.circles{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    align-items: center;
+    
+
+}
+
+.whitecircle{
+    width: 50px;
+    background-color: aliceblue;
+    height: 50px;
+    border-radius: 50%;
+}
+.linecircle{
+    width: 20px;
+    height: 20px;
+    border: 1.7px solid white;
+    border-radius: 50%;
+}
+
+
+.card2{
+    background-image: url('./images/bg-card-back.png');
+    background-repeat: no-repeat;
+    width: 450px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    /* position: absolute;
+    margin-top: 300px; */
+    margin-left: 100px;
+    color:white;
+    
+
+}
+
+
+
+.imgcards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.card2 p{
+    margin-left: 300px;
+}
+
+
+
+.username{
+    display: flex;
+    flex-direction: row;
+    gap: 250px;
+    color:white;
+    
+}
+
+.card1 h3{
+    color:white;
+    font-size: 35px;
+    font-weight: 200;
+    
+    
+    
+    
+}
+
+.column{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
