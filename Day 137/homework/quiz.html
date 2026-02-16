@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Neon Profession Quiz</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: #000;
+        color: #00f7ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        transition:
+          background 0.3s,
+          color 0.3s;
+      }
+
+      .light-mode {
+        background: #f2f1ed;
+        color: #4d1712;
+      }
+
+      .quiz-container {
+        width: 500px;
+        text-align: center;
+        position: relative;
+      }
+
+      .mode-toggle {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        padding: 8px 12px;
+        cursor: pointer;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 14px;
+        transition: all 0.3s;
+      }
+
+      body:not(.light-mode) .mode-toggle {
+        background: #00f7ff;
+        color: #4d1712;
+        box-shadow: 0 0 15px #00f7ff;
+      }
+
+      body.light-mode .mode-toggle {
+        background: #4d1712;
+        color: #f2f1ed;
+        box-shadow: 0 0 10px #aaa;
+      }
+
+      .question {
+        display: none;
+        padding: 15px;
+        margin-bottom: 25px;
+        border-radius: 8px;
+        border: 3px solid #00f7ff;
+        box-shadow: 0 0 15px #00f7ff;
+        font-size: 18px;
+        transition: all 0.3s;
+      }
+
+      body.light-mode .question {
+        border-color: #4d1712;
+        box-shadow: 0 0 10px #aaa;
+      }
+
+      .question.active {
+        display: block;
+      }
+
+      .answers {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+
+      .answer {
+        padding: 12px;
+        border-radius: 6px;
+        border: 3px solid #00f7ff;
+        background: transparent;
+        color: #00f7ff;
+        cursor: pointer;
+        box-shadow: 0 0 10px #00f7ff;
+        transition: all 0.3s;
+        font-size: 16px;
+      }
+
+      .answer:hover,
+      .answer.selected {
+        background: #00f7ff;
+        color: #4d1712;
+        box-shadow: 0 0 25px #00f7ff;
+      }
+
+      body.light-mode .answer {
+        border-color: #4d1712;
+        color: #4d1712;
+        box-shadow: 0 0 8px #aaa;
+      }
+
+      body.light-mode .answer:hover,
+      body.light-mode .answer.selected {
+        background: #4d1712;
+        color: #f2f1ed;
+        box-shadow: 0 0 15px #4d1712;
+      }
+
+      #result {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      /* PROFILE LINK */
+      #you {
+        position: absolute;
+        bottom: 250px;
+        text-decoration: none;
+        color: inherit;
+        display: none;
+        align-items: center;
+        gap: 6px;
+      }
+
+      #you ion-icon {
+        font-size: 34px;
+        filter: drop-shadow(0 0 10px #00f7ff);
+      }
+
+      body.light-mode #you ion-icon {
+        filter: drop-shadow(0 0 6px #aaa);
+      }
+
+      #p {
+        font-size: 25px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quiz-container">
+      <button class="mode-toggle" id="modeToggle">Light Mode</button>
+
+      <h1>Profession Quiz</h1>
+
+      <div class="question active">
+        <h2>
+          A heavy pipe bursts in a building, and water is spraying everywhere.
+          What is your first instinct?
+        </h2>
+        <div class="answers">
+          <button class="answer" data-profession="Labor">
+            A: Grab a wrench or heavy cloth and physically try to stop the spray
+            immediately.
+          </button>
+          <button class="answer" data-profession="Tech">
+            B: Find the blueprint or shut-off valve to understand the whole
+            system before acting.
+          </button>
+          <button class="answer" data-profession="Humanities">
+            C: Check if everyone is okay and direct people to safety/calm them
+            down.
+          </button>
+          <button class="answer" data-profession="Medical">
+            D: Assess if the water is contaminated and if anyone has sustained
+            an injury from the pressure.
+          </button>
+        </div>
+      </div>
+
+      <div class="question">
+        <h2>
+          You are given a complex 1,000-piece IKEA-style cabinet to build. How
+          do you start?
+        </h2>
+        <div class="answers">
+          <button class="answer" data-profession="Labor">
+            A: Open the box and start fitting pieces together by intuition and
+            physical feel.
+          </button>
+          <button class="answer" data-profession="Tech">
+            B: Lay every single screw out in a grid and read the entire manual
+            twice before touching a board.
+          </button>
+          <button class="answer" data-profession="Humanities">
+            C: Think about how the cabinet will change the "vibe" and flow of
+            the room.
+          </button>
+          <button class="answer" data-profession="Medical">
+            D: Focus on the ergonomics—ensuring the height is safe for the
+            user’s back and joints.
+          </button>
+        </div>
+      </div>
+
+      <div class="question">
+        <h2>Which of these "invisible things" is most interesting to you?</h2>
+        <div class="answers">
+          <button class="answer" data-profession="Tech">
+            A: The "Logic" inside a computer (Code/Algorithms).
+          </button>
+          <button class="answer" data-profession="Humanities">
+            B: The "Culture" between people (History/Politics/Language).
+          </button>
+          <button class="answer" data-profession="Medical">
+            C: The "Biology" inside a body (Chemicals/Cells/Organs).
+          </button>
+          <button class="answer" data-profession="Labor">
+            D: The "Physics" of a structure (Weight/Balance/Gravity).
+          </button>
+        </div>
+      </div>
+
+      <div class="question">
+        <h2>If you had to spend 8 hours in one room, which would it be?</h2>
+        <div class="answers">
+          <button class="answer" data-profession="Tech">
+            A: A clean, silent laboratory with high-end computers.
+          </button>
+          <button class="answer" data-profession="Humanities">
+            B: A vibrant studio or office where people are debating ideas.
+          </button>
+          <button class="answer" data-profession="Medical">
+            C: A sterile clinic where you are helping people solve health
+            issues.
+          </button>
+          <button class="answer" data-profession="Labor">
+            D: A massive workshop, farm, or outdoor site where you are moving
+            all day.
+          </button>
+        </div>
+      </div>
+
+      <div class="question">
+        <h2>What makes you feel most "successful" at the end of a work day?</h2>
+        <div class="answers">
+          <button class="answer" data-profession="Tech">
+            A: "I solved a bug/puzzle that was driving everyone else crazy."
+          </button>
+          <button class="answer" data-profession="Humanities">
+            B: "I changed someone's mind or told a story that moved people."
+          </button>
+          <button class="answer" data-profession="Medical">
+            C: "I took away someone's pain or stabilized a patient." (Medical)
+          </button>
+          <button class="answer" data-profession="Labor">
+            D: "I am physically exhausted because I built/moved something real."
+            (Labor)
+          </button>
+        </div>
+      </div>
+      <div id="result"></div>
+    </div>
+    <a id="you" href="yourprofile.html"
+      ><ion-icon name="person-circle-outline"> </ion-icon>
+      <p id="p">click to continue</p></a
+    >
+    <script>
+      const questions = document.querySelectorAll('.question');
+      const resultEl = document.getElementById('result');
+      const modeToggle = document.getElementById('modeToggle');
+      const youLink = document.getElementById('you');
+
+      let currentQuestion = 0;
+      let scores = {};
+
+      questions.forEach((question) => {
+        const buttons = question.querySelectorAll('.answer');
+        buttons.forEach((button) => {
+          button.addEventListener('click', () => {
+            const profession = button.dataset.profession;
+            scores[profession] = (scores[profession] || 0) + 1;
+
+            buttons.forEach((b) => b.classList.remove('selected'));
+            button.classList.add('selected');
+
+            setTimeout(() => {
+              question.classList.remove('active');
+              currentQuestion++;
+              if (currentQuestion < questions.length) {
+                questions[currentQuestion].classList.add('active');
+              } else {
+                showResult();
+                youLink.style.display = 'flex';
+              }
+            });
+          });
+        });
+      });
+
+      function showResult() {
+        let bestProfession = '';
+        let maxScore = 0;
+        for (let profession in scores) {
+          if (scores[profession] > maxScore) {
+            maxScore = scores[profession];
+            bestProfession = profession;
+          }
+          if (bestProfession === 'Tech') {
+            resultEl.style.color = 'green';
+          } else if (bestProfession === 'Humanities') {
+            resultEl.style.color = 'pink';
+          } else if (bestProfession === 'Medical') {
+            resultEl.style.color = 'red';
+          } else if (bestProfession === 'Labor') {
+            resultEl.style.color = 'yellow';
+          }
+        }
+        resultEl.textContent =
+          'Your most likely profession is: ' + bestProfession;
+
+        localStorage.setItem('quizResult', bestProfession);
+      } 
+      modeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        if (document.body.classList.contains('light-mode')) {
+          modeToggle.textContent = 'Dark Mode';
+        } else {
+          modeToggle.textContent = 'Light Mode';
+        }
+      });
+    </script>
+    <script src="black.js"></script>
+  </body>
+</html>

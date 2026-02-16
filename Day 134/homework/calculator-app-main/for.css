@@ -1,0 +1,118 @@
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(222, 26%, 31%);
+}
+
+
+
+.Calculator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+    
+    
+}
+
+
+.calculatortheme{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 200%;
+    padding: 10px;
+    align-items: center;
+}
+
+
+.theme{
+    display: flex;
+    flex-direction: row;
+    gap:20px
+}
+
+.numbers{
+    display: flex;
+    flex-direction: column;
+    
+   
+    
+}
+
+.themebutton{
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(223, 31%, 20%);
+    width: 50px;
+    height: 20px;
+    border-radius: 30px;
+    align-items: center;
+    padding: 2px 4px;
+    
+}
+
+.redcircle{
+    background-color: hsl(6, 63%, 50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.t{
+    margin-top: 18px;
+}
+
+.a123{
+    margin-left: 27px;
+}
+
+
+.calc{
+    margin-top: 16px;
+}
+
+.nums{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    
+
+
+}
+
+.nums div{
+    font-size: 2.2rem;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: hsl(0, 0%, 90%);
+    font-weight: 600;
+    
+}
+
+
+.display{
+    background-color: hsl(224, 36%, 15%);
+    width: 100%;
+    height: 110px;
+    border-radius: 10px;
+}

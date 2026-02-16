@@ -13,3 +13,15 @@
 
 
 // var is bad because it ignores blocks and can go outside of them
+
+
+
+// 1) კომენტარებით ახსენით, რა არის scope JavaScript-ში, მოიყვანეთ მაგალითები
+
+// 2) კომენტარებით ახსენით, რა არის hoisting-ი
+
+// 3) ახსენით რატომ არის ცუდი var ის გამოყენება
+
+
+// 4-5) მთლიანად დაასრულეთ ეს პროექტი სახლში
+// https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Job News & Comments</title>
+
+<style>
+  body {
+    margin: 0;
+    background: #0e0e0e;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 100px;
+  }
+
+  /* NEWS CARD */
+  .news {
+    background: #151515;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 25px;
+  }
+
+  .news .tag {
+    display: inline-block;
+    background: #00f7ff;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+
+  .news h1 {
+    margin: 10px 0;
+    font-size: 22px;
+  }
+
+  .news .meta {
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 15px;
+  }
+
+  .news p {
+    line-height: 1.6;
+    color: #ddd;
+  }
+
+  .jobs {
+    margin-top: 15px;
+    background: #1c1c1c;
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  .job {
+    padding: 10px 0;
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  .job:last-child {
+    border-bottom: none;
+  }
+
+  .job-title {
+    font-weight: bold;
+    color: #00f7ff;
+  }
+
+  .job-info {
+    font-size: 13px;
+    color: #aaa;
+  }
+
+  /* COMMENTS */
+  .comments {
+    background: #151515;
+    border-radius: 14px;
+    padding: 20px;
+  }
+
+  .comments h2 {
+    margin-bottom: 20px;
+  }
+
+  .comment {
+    display: flex;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid #222;
+  }
+
+  .comment:last-child {
+    border-bottom: none;
+  }
+
+  .avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00f7ff, #6a00ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #000;
+    flex-shrink: 0;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  .username {
+    font-weight: bold;
+    color: #00f7ff;
+  }
+
+  .time {
+    font-size: 12px;
+    color: #888;
+    margin-left: 6px;
+  }
+
+  .text {
+    margin-top: 6px;
+    line-height: 1.5;
+    color: #ddd;
+  }
+
+  .actions {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #888;
+  }
+
+  .actions span {
+    margin-right: 15px;
+    cursor: pointer;
+  }
+
+  .actions span:hover {
+    color: #00f7ff;
+  }
+  header{
+    background-color: #1a1741;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 100px;
+    align-items: center;
+    border-bottom: #00ccff solid 1px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:100px
+}
+
+header nav a{
+    color: rgb(206, 218, 237);
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.start{
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(245, 250, 255);
+    box-shadow: 0 0 10px #054656, inset 0 0 10px rgba(10, 0, 86, 0.73);
+}
+.start a{
+    color:#0A192F
+}
+
+.jobimg{
+    width: 20%;
+    height: 75px;
+    border-radius: 20px;
+    object-fit: cover;
+    display: inline-block;
+}
+
+</style>
+</head>
+
+<body>
+
+    <header>
+       <img class="jobimg" src="https://cdn.dribbble.com/userupload/35981999/file/original-9d335257f6d1e771b1c5aa97274601e0.jpg?resize=400x0" alt="">
+        <nav>
+           
+            <a href="groupp.html"><ion-icon name="home-outline"></ion-icon> HOME</a>
+            <a href="aboutus.html"><ion-icon name="call-outline"></ion-icon> ABOUT US</a>
+            <a href="info.html"><ion-icon name="earth-outline"></ion-icon> NEWS</a>
+            <button id="users" class="start"><a href="register.html">Get Started for Free!</a></button>
+            <a id="you" href="yourprofile.html"><ion-icon name="person-circle-outline"> </ion-icon><p id="p"></p></a>
+            
+        </nav>
+    </header>
+
+<div class="container">
+
+  <!-- FAKE NEWS -->
+  <div class="news">
+    <div class="tag">JOB UPDATE</div>
+    <h1>New Tech Jobs Opening This Month</h1>
+    <div class="meta">Posted today • Remote & On-site</div>
+
+    <p>
+      Several companies have announced new hiring rounds for developers,
+      designers, and tech specialists. These positions are expected to
+      open within the next two weeks.
+    </p>
+
+    <div class="jobs">
+      <div class="job">
+        <div class="job-title">Frontend Developer</div>
+        <div class="job-info">Remote • Full-time • Junior–Mid</div>
+      </div>
+
+      <div class="job">
+        <div class="job-title">UI/UX Designer</div>
+        <div class="job-info">On-site • Contract • Portfolio required</div>
+      </div>
+
+      <div class="job">
+        <div class="job-title">JavaScript Intern</div>
+        <div class="job-info">Remote • Paid • No experience required</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMMENTS -->
+  <div class="comments">
+    <h2>Comments</h2>
+
+    <div class="comment">
+      <div class="avatar">A</div>
+      <div class="content">
+        <div>
+          <span class="username">Andria</span>
+          <span class="time">• 1 hour ago</span>
+        </div>
+        <div class="text">
+          That frontend role looks interesting 👀 Anyone know when applications open?
+        </div>
+        <div class="actions">
+          <span>Like</span>
+          <span>Reply</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="comment">
+      <div class="avatar">J</div>
+      <div class="content">
+        <div>
+          <span class="username">Jeronimo</span>
+          <span class="time">• 3 hours ago</span>
+        </div>
+        <div class="text">
+          JavaScript internship being paid is a big W 🔥
+        </div>
+        <div class="actions">
+          <span>Like</span>
+          <span>Reply</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="comment">
+      <div class="avatar">M</div>
+      <div class="content">
+        <div>
+          <span class="username">Maya</span>
+          <span class="time">• yesterday</span>
+        </div>
+        <div class="text">
+          Finally seeing more junior-friendly openings 🙌
+        </div>
+        <div class="actions">
+          <span>Like</span>
+          <span>Reply</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
