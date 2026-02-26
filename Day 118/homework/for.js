@@ -23,4 +23,5 @@
 
 
 let p = document.createElement("p")
-
+p.innerHTML = "hello"
+document.body.appendChild("p")

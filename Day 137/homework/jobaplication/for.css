@@ -61,18 +61,23 @@ header nav a{
 
 .discover{
     display: flex;
-    
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    padding: 200px;
+    padding: 80px 5%;
     color:#ffffff;
-    gap:30px
+    gap:30px;
+    min-height: 80vh;
+
 }
 
-.discover img{
-    width: 400px;
-    mix-blend-mode: screen;
+.hero-video{
+    width: 100%;
+    /* mix-blend-mode: screen; */
+    max-width: 500px;
     height: 300px;
     border-radius: 10px;
+    
 }
 
 .desc{
@@ -134,7 +139,7 @@ header nav a{
         
     }
 
-    .discover img{
+    .hero-video{
         width: 300px;
         height: auto;
     }
@@ -156,7 +161,7 @@ header nav a{
 
 
 
-    .discover img{
+    .hero-video {
         width: 300px;
         height: auto;
     }
