@@ -1,0 +1,116 @@
+
+
+
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(222, 234, 235);
+    height: 100vh;
+    
+    
+}
+
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    
+    background-color: rgb(239, 239, 199);
+    
+}
+
+.main h1{
+    color: rgb(2, 49, 135);
+    font-weight: 600;
+    
+}
+
+.main div input{
+    padding: 10px;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px 0px 0px 10px;
+    margin-left: 20px;
+    border: none;
+}
+
+
+.main div{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+
+
+ol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    
+    
+}
+
+ol .li{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    width: 500px; 
+    padding: 5px 30px;
+    border-radius: 20px;
+    background-color: azure;
+    text-align: center;
+    justify-content: center;
+    
+
+    
+}
+
+
+.bin{
+    width:35px;
+    border-radius: 40px;
+    
+
+}
+
+ol .li p {
+    margin: 0;
+    padding: 10px;
+}
+
+
+
+#save{
+    border-radius: 0px 10px 10px 0px;
+    padding: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    background-color: rgb(73, 165, 42);
+    color:white
+}
+
+
+
+
+
+.liDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: self-end;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    /* border-bottom: 1px solid #eee */
+    /* justify-content: center;
+    align-items: center; */
+    
+
+}   
